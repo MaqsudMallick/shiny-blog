@@ -1,0 +1,21 @@
+{% include header.html %}
+<ul type="none">
+    <li class="half">
+        <hr class="btmspace-25">
+        <h1 class="seperating-h1">Novels</h1>
+        <hr class="btmspace-50">
+    </li>
+    <ul type="none">
+        {% for novel in site.data.novels %}
+        <li>
+            <a href="{{novel.url}}">
+                <p style="margin: 0; clear: left;">{{novel.title}}</p>
+            </a>
+            <br />
+        </li>
+        <br />
+        {% endfor %}
+    </ul>
+</ul>
+
+{% include footer.html %}

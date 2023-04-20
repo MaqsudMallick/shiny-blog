@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <title>{{ site.title }}</title>
+    <!-- MetaData -->
+    <meta charset="UTF-8">
+    <meta name="description"
+        content="The Banished Sage who Escaped his Childhood friend Chapter {{page.description}}: {{page.subtitle}}">
+    <meta name="keywords"
+        content="Banished, Sage, Chapter, Escaped. childhood, friend, who, {{page.description}}, {{page.subtitle}}">
+    <meta name="author" content="Shiny">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- Styles  -->
+    <link href="{{ site.baseurl }}/assets/css/style.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/newsletter.css" type="text/css">
+    <link rel="icon" href="/assets/images/favicon.ico" />
+    <script src="https://kit.fontawesome.com/2c2aaca7e9.js" crossorigin="anonymous"></script>
+</head>
+
+<body id="top">
+    <button onClick="location.href= 'https://www.patreon.com/shinyMade/'" class="donation"><i
+            class="fab fa-patreon"></i> Buy Me a Coffee ☕</button>
+    <!-- Top Background Image Wrapper -->
+    <div class="bgded overlay" style="background-image:url('{{ site.baseurl }}/assets/images/01.jpg');">
+        <header id="header" class="hoc clear">
+            <div id="logo" class="two_quarter first">
+                <h1><a href="/">
+                        <picture>
+                            <source srcset="assets/images/Shiny Logo.webp" type="image/webp"
+                                style="width: 75px; height: 75px;">
+                            <source srcset="assets/images/Shiny Logo.png" type="image/jpeg"
+                                style="width: 75px; height: 75px;">
+                            <img src="{{ site.baseurl }}/assets/images/Shiny Logo.png"
+                                style="width: 75px; height: 75px;">
+                        </picture>
+                        {{ site.title }}
+                    </a></h1>
+            </div>
+        </header>
+        <section id="navwrapper" class="hoc clear">
+            <nav id="mainav">
+                <ul class="clear">
+                    <li class="active"><a href="/">Home</a></li>
+                    <li><a class="drop" href="#">Novels</a>
+                        <ul>
+                            {% for novel in site.data.novels %}
+                            <li><a href="{{novel.url}}">{{novel.title}}</a></li>
+                            {% endfor %}
+                        </ul>
+                        <!-- <li> <a class="dark-mode" id="dark-mode" href="#">Dark Mode <i class="fas fa-toggle-off"></i></a> -->
+                    </li>
+                </ul>
+            </nav>
+        </section>
+        <br />
+        <br />
+    </div>
