@@ -33,10 +33,10 @@
             {% endif %}
             {% endfor %}
             {% if next_post %}
-            <a href="{{ next_post }}" class="btn">Next Post</a> <br>
-            {% endif %}
+            <a href="{{site.baseurl}}{{ next_post }}" class="btn">Next Post</a> <br>
+            {% endif %} <br />
             {% if prev_post %}
-            <a href="{{ prev_post }}" class="btn">Previous Post</a> <br>
+            <a href="{{site.baseurl}}{{ prev_post }}" class="btn">Previous Post</a> <br>
             {% endif %}
         </div>
         {% include disqus.html %}
