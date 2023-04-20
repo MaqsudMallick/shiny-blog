@@ -34,7 +34,7 @@
                     {% for item in site.posts %}
                     {% if item.categories contains page.category %}
                     <li>
-                        <a href="{{item.url}}">
+                        <a href="{{site.baseurl}}/{{item.url}}">
                             <p style="font-size: 20px; margin: 0; clear: left;">{{item.ch_no}}. {{item.title}}
                             </p>
                         </a>
